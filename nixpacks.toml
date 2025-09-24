@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["go build -o bin/chat ."]
+
+[phases.start]
+cmd = "./bin/chat"
