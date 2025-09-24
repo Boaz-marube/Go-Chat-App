@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: realtime-chat-go
+    env: go
+    buildCommand: go build -o bin/chat
+    startCommand: ./bin/chat
+    envVars:
+      - key: PORT
+        value: 10000

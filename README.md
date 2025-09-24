@@ -137,11 +137,11 @@ make test
 - **[gorilla/websocket](https://github.com/gorilla/websocket)**: WebSocket implementation
 - **[google/uuid](https://github.com/google/uuid)**: UUID generation for client IDs
 
-## Railway Deployment
+## Render Deployment
 
 **Prerequisites:**
 - GitHub account
-- Railway account (free tier available)
+- Render account (free tier available)
 
 **Steps:**
 1. **Push to GitHub:**
@@ -154,20 +154,20 @@ make test
    git push -u origin main
    ```
 
-2. **Deploy on Railway:**
-   - Go to [railway.app](https://railway.app)
+2. **Deploy on Render:**
+   - Go to [render.com](https://render.com)
    - Sign up/Login with GitHub
-   - Click "New Project" → "Deploy from GitHub repo"
-   - Select your repository
-   - Railway will automatically detect Go and deploy
+   - Click "New" → "Web Service"
+   - Connect your GitHub repository
+   - Render will use `render.yaml` configuration
+   - Deploy automatically
 
 3. **Access your app:**
-   - Railway will provide a public URL
+   - Render will provide a public URL
    - Your chat app will be live and accessible
 
 **Configuration Files:**
-- `railway.toml` - Railway deployment settings
-- `nixpacks.toml` - Build configuration
+- `render.yaml` - Render deployment settings
 - Port automatically configured via environment variable
 
 ## License
