@@ -137,6 +137,39 @@ make test
 - **[gorilla/websocket](https://github.com/gorilla/websocket)**: WebSocket implementation
 - **[google/uuid](https://github.com/google/uuid)**: UUID generation for client IDs
 
+## Railway Deployment
+
+**Prerequisites:**
+- GitHub account
+- Railway account (free tier available)
+
+**Steps:**
+1. **Push to GitHub:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin <your-github-repo-url>
+   git push -u origin main
+   ```
+
+2. **Deploy on Railway:**
+   - Go to [railway.app](https://railway.app)
+   - Sign up/Login with GitHub
+   - Click "New Project" → "Deploy from GitHub repo"
+   - Select your repository
+   - Railway will automatically detect Go and deploy
+
+3. **Access your app:**
+   - Railway will provide a public URL
+   - Your chat app will be live and accessible
+
+**Configuration Files:**
+- `railway.toml` - Railway deployment settings
+- `nixpacks.toml` - Build configuration
+- Port automatically configured via environment variable
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
